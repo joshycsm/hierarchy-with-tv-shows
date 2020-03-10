@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 
-// import ShowCard from "./showCard";
+import ShowCard from "./showCard";
 
 const tvShowURL = "https://api.tvmaze.com/shows";
 
@@ -19,12 +19,7 @@ class App extends Component {
 
   showCards = () => {
     return this.state.shows.map(show => {
-      return (
-        <div className="show-card">
-          <img src={show.image.medium} />
-          <h2>{show.name}</h2>
-        </div>
-      );
+      return <ShowCard key={show.id} show={show} />;
     });
   };
   render() {

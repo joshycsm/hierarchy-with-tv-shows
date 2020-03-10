@@ -1,16 +1,18 @@
 import React from "react";
 
-function showCard(props) {
-  console.log(props);
+function ShowCard(props) {
+  console.log("props", props);
 
   const { show } = props;
 
-  console.log(show);
+  console.log("show", show);
 
   return (
     <div className="show-card">
-      <img src="{show.image.medium}" alt="" />
+      <img src={show.image.medium} alt={show.name} />
       <h2>{show.name}</h2>
     </div>
   );
 }
+
+export default ShowCard;
